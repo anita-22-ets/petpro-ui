@@ -1,0 +1,12 @@
+<form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="amount">Amount</label>
+    <input id="amount" formControlName="amount" type="number" min="1" />
+    <div *ngIf="submitted && paymentForm.controls.amount.errors">
+      <small *ngIf="paymentForm.controls.amount.errors.required">Amount is required.</small>
+      <small *ngIf="paymentForm.controls.amount.errors.min">Amount must be at least 1.</small>
+    </div>
+  </div>
+
+  <button type="submit">Pay with Gateway</button>
+</form>
