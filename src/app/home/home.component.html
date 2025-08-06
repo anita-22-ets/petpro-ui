@@ -1,21 +1,46 @@
 <div class="home-container">
-  <h1>Welcome to PetPro App</h1>
-  <p>Discover our services and unique features designed for you.</p>
+  <div class="hero">
+    <img src="icons8-dog-park.png" alt="PetPro Logo" class="hero-logo" />
+    <h1>Welcome to <span class="highlight">PetPro App <img src="cat-caregivers.png" alt="Logo" width="32" height="32" style="vertical-align: middle; margin-right: 8px;"></span></h1>
+    <p class="subtitle">Discover our vibrant services and unique features designed just for you and your furry friends.</p>
+  </div>
 
   <section class="usps">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>Easy scheduling for family and pets</li>
-      <li>Secure online payments</li>
-      <li>Real-time notifications</li>
-      <li>Comprehensive dashboard for users and admins</li>
-      <li>24/7 support</li>
-    </ul>
+    <h2><span class="icon"></span> Why Choose Us? <span class="icon"></span></h2>
+    <div class="usps-list">
+      <div class="usp-card">
+        <span class="usp-icon">📅</span>
+        <span>Easy scheduling for family and pets</span>
+      </div>
+      <div class="usp-card">
+        <span class="usp-icon">💳</span>
+        <span>Secure online payments</span>
+      </div>
+      <div class="usp-card">
+        <span class="usp-icon">🔔</span>
+        <span>Real-time notifications</span>
+      </div>
+      <div class="usp-card">
+        <span class="usp-icon">📊</span>
+        <span>Comprehensive dashboard for users and admins</span>
+      </div>
+      <div class="usp-card">
+        <span class="usp-icon">🕑</span>
+        <span>24/7 support</span>
+      </div>
+    </div>
   </section>
 
   <section class="actions">
-    <button routerLink="/register">Register</button>
-    <button routerLink="/services">Explore Services</button>
-    <button routerLink="/login">Login</button>
+    <button class="cta primary" routerLink="/register">🐾 Register</button>
+    <button class="cta secondary" routerLink="/services">✨ Explore Services</button>
+    <button class="cta accent" routerLink="/login">🔑 Login</button>
+  </section>
+
+  <section class="testimonial">
+    <blockquote>
+      <p>“PetPro made managing my pets and family so easy! The dashboard is a game changer.”</p>
+      <footer>– Happy Customer</footer>
+    </blockquote>
   </section>
 </div>
