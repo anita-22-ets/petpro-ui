@@ -1,0 +1,29 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name</label>
+    <input id="name" formControlName="name" type="text" />
+    <div *ngIf="submitted && registrationForm.controls['name'].errors">
+      <small *ngIf="registrationForm.controls['name'].errors?.['required']">Name is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" type="email" />
+    <div *ngIf="submitted && registrationForm.controls['email'].errors">
+      <small *ngIf="registrationForm.controls['email'].errors?.['required']">Email is required.</small>
+      <small *ngIf="registrationForm.controls['email'].errors?.['email']">Invalid email format.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input id="password" formControlName="password" type="password" />
+    <div *ngIf="submitted && registrationForm.controls['password'].errors">
+      <small *ngIf="registrationForm.controls['password'].errors?.['required']">Password is required.</small>
+      <small *ngIf="registrationForm.controls['password'].errors?.['minlength']">Password must be at least 6 characters.</small>
+    </div>
+  </div>
+
+  <button type="submit">Register</button>
+</form>

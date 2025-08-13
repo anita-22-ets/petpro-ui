@@ -1,0 +1,30 @@
+<form [formGroup]="scheduleForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="type">Type</label>
+    <select id="type" formControlName="type">
+      <option value="family">Family</option>
+      <option value="pet">Pet</option>
+    </select>
+    <div *ngIf="submitted && scheduleForm.controls.type.errors">
+      <small *ngIf="scheduleForm.controls.type.errors.required">Type is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="pickupTime">Pickup Time</label>
+    <input id="pickupTime" formControlName="pickupTime" type="datetime-local" />
+    <div *ngIf="submitted && scheduleForm.controls.pickupTime.errors">
+      <small *ngIf="scheduleForm.controls.pickupTime.errors.required">Pickup time is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="dropoffTime">Dropoff Time</label>
+    <input id="dropoffTime" formControlName="dropoffTime" type="datetime-local" />
+    <div *ngIf="submitted && scheduleForm.controls.dropoffTime.errors">
+      <small *ngIf="scheduleForm.controls.dropoffTime.errors.required">Dropoff time is required.</small>
+    </div>
+  </div>
+
+  <button type="submit">Schedule</button>
+</form>

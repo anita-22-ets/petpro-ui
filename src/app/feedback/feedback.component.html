@@ -1,0 +1,31 @@
+<form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="rating">Rating (1-5)</label>
+    <input id="rating" formControlName="rating" type="number" min="1" max="5" />
+    <div *ngIf="submitted && feedbackForm.controls.rating.errors">
+      <small *ngIf="feedbackForm.controls.rating.errors.required">Rating is required.</small>
+      <small *ngIf="feedbackForm.controls.rating.errors.min || feedbackForm.controls.rating.errors.max">Rating must be between 1 and 5.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="message">Message</label>
+    <textarea id="message" formControlName="message"></textarea>
+    <div *ngIf="submitted && feedbackForm.controls.message.errors">
+      <small *ngIf="feedbackForm.controls.message.errors.required">Message is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="category">Category</label>
+    <select id="category" formControlName="category">
+      <option value="" disabled>Select category</option>
+      <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
+    </select>
+    <div *ngIf="submitted && feedbackForm.controls.category.errors">
+      <small *ngIf="feedbackForm.controls.category.errors.required">Category is required.</small>
+    </div>
+  </div>
+
+  <button type="submit">Submit Feedback</button>
+</form>

@@ -1,0 +1,20 @@
+<div class="tabs">
+  <button [class.active]="activeTab === 'users'" (click)="setTab('users')">Users</button>
+  <button [class.active]="activeTab === 'pets'" (click)="setTab('pets')">Pets</button>
+  <button [class.active]="activeTab === 'reports'" (click)="setTab('reports')">Reports</button>
+</div>
+
+<div class="tab-content">
+  <ng-container *ngIf="activeTab === 'users'">
+    <h2>Users</h2>
+    <!-- User management content here -->
+  </ng-container>
+  <ng-container *ngIf="activeTab === 'pets'">
+    <h2>Pets</h2>
+    <!-- Pet management content here -->
+  </ng-container>
+  <ng-container *ngIf="activeTab === 'reports'">
+    <h2>Reports</h2>
+    <!-- Reports content here -->
+  </ng-container>
+</div>

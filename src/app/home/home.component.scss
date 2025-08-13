@@ -1,0 +1,179 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.usps h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.usps ul {
+    list-style: none;
+    padding: 0;
+}
+
+.usps li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usps li .icon {
+    margin-right: 10px;
+    color: #4CAF50;
+}
+
+.actions button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .actions button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+/* General dashboard styling */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+    min-height: 100vh;
+}
+
+/* Individual section styling */
+.dashboard-section {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icon styling */
+.dashboard-section .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Section hover effect */
+.dashboard-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Different colors for sections */
+.dashboard-section:nth-child(1) {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+.dashboard-section:nth-child(2) {
+    background: linear-gradient(135deg, #6a85b6, #bac8e0);
+}
+.dashboard-section:nth-child(3) {
+    background: linear-gradient(135deg, #ff9a8b, #ff6a88);
+}
+.dashboard-section:nth-child(4) {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+.dashboard-section:nth-child(5) {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}/* General dashboard styling */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+    min-height: 100vh;
+}
+
+/* Individual section styling */
+.dashboard-section {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icon styling */
+.dashboard-section .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Section hover effect */
+.dashboard-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Different colors for sections */
+.dashboard-section:nth-child(1) {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+.dashboard-section:nth-child(2) {
+    background: linear-gradient(135deg, #6a85b6, #bac8e0);
+}
+.dashboard-section:nth-child(3) {
+    background: linear-gradient(135deg, #ff9a8b, #ff6a88);
+}
+.dashboard-section:nth-child(4) {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+.dashboard-section:nth-child(5) {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}

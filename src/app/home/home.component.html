@@ -1,0 +1,27 @@
+<div class="home-container">
+  <h1>Welcome to PetPro <img src="cat-caregivers.png" alt="Logo" width="32" height="32" style="vertical-align: middle; margin-right: 8px;"></h1>
+  <p>Discover our services and unique features designed for you.</p>
+
+  <section class="usps">
+    <h2>Why Choose Us?</h2>
+    <div class="dashboard">
+  <div class="dashboard-section" *ngFor="let feature of features">
+    <i class="icon" [ngClass]="feature.icon"></i>
+    <h3>{{ feature.text }}</h3>
+  </div>
+</div>
+    <!-- <ul>
+      <li>Easy scheduling for family and pets</li>
+      <li>Secure online payments</li>
+      <li>Real-time notifications</li>
+      <li>Comprehensive dashboard for users and admins</li>
+      <li>24/7 support</li>
+    </ul> -->
+  </section>
+
+  <section class="actions">
+    <button routerLink="/register" (click)="navigateToRegistration()">Register</button>
+    <button routerLink="/services">Explore Services</button>
+    <button routerLink="/login" (click)="navigateToLogin()">Login</button>
+  </section>
+</div>

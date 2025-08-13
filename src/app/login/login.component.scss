@@ -1,0 +1,145 @@
+/* General container styling */
+.login-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px; /* Larger font size */
+    color: #333; /* Darker text color */
+  }
+  
+  .login-container p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #f0f0f0;
+  }
+
+  
+/* Styling for form fields */
+.login-container form div {
+    margin-bottom: 20px; /* Increased spacing between fields */
+  }
+  
+  .login-container label {
+    display: block;
+    margin-bottom: 8px; /* Increased spacing below labels */
+    font-weight: bold; /* Bold labels */
+    color: #555; /* Slightly darker label color */
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 12px; /* Increased padding for larger input fields */
+    font-size: 16px; /* Larger font size */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Rounded input fields */
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the submit button */
+  .login-container button {
+    width: 100%;
+    padding: 14px; /* Increased padding for a larger button */
+    font-size: 18px; /* Larger font size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .login-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .login-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Form styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #ff4a3d;
+  }
+  
+  /* Forgot password link */
+  .forgot-password {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .forgot-password a {
+    color: #f0f0f0;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .forgot-password a:hover {
+    color: #ffcccb;
+  }
+  
+  /* Error messages */
+  .error {
+    color: #ffcccb;
+    font-size: 12px;
+  }
+  
+  /* Password instructions */
+  .password-instructions {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #f0f0f0;
+  }
