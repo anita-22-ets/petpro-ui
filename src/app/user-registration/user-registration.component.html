@@ -1,29 +1,42 @@
-<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name">Name</label>
-    <input id="name" formControlName="name" type="text" />
-    <div *ngIf="submitted && registrationForm.controls['name'].errors">
-      <small *ngIf="registrationForm.controls['name'].errors?.['required']">Name is required.</small>
+<div class="registration-wrapper">
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="registration-form">
+    <h2 class="form-title">Create Your Account</h2>
+    <div class="form-group">
+      <label for="username">Name</label>
+      <input id="username" formControlName="username" type="text" />
+      <div *ngIf="submitted && registrationForm.controls['username'].errors">
+        <small *ngIf="registrationForm.controls['username'].errors?.['required']">Name is required.</small>
+      </div>
     </div>
-  </div>
 
-  <div>
-    <label for="email">Email</label>
-    <input id="email" formControlName="email" type="email" />
-    <div *ngIf="submitted && registrationForm.controls['email'].errors">
-      <small *ngIf="registrationForm.controls['email'].errors?.['required']">Email is required.</small>
-      <small *ngIf="registrationForm.controls['email'].errors?.['email']">Invalid email format.</small>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email" />
+      <div *ngIf="submitted && registrationForm.controls['email'].errors">
+        <small *ngIf="registrationForm.controls['email'].errors?.['required']">Email is required.</small>
+        <small *ngIf="registrationForm.controls['email'].errors?.['email']">Invalid email format.</small>
+      </div>
     </div>
-  </div>
 
-  <div>
-    <label for="password">Password</label>
-    <input id="password" formControlName="password" type="password" />
-    <div *ngIf="submitted && registrationForm.controls['password'].errors">
-      <small *ngIf="registrationForm.controls['password'].errors?.['required']">Password is required.</small>
-      <small *ngIf="registrationForm.controls['password'].errors?.['minlength']">Password must be at least 6 characters.</small>
+    <div class="form-group">
+      <label for="password">
+        Password
+        <span class="password-info" title="Password must be at least 6 characters.">?</span>
+      </label>
+      <div class="password-instructions">
+        Password must be at least 6 characters.
+      </div>
+      <input id="password" formControlName="password" type="password" />
+      <div *ngIf="submitted && registrationForm.controls['password'].errors">
+        <small *ngIf="registrationForm.controls['password'].errors?.['required']">Password is required.</small>
+        <small *ngIf="registrationForm.controls['password'].errors?.['minlength']">Password must be at least 6 characters.</small>
+      </div>
     </div>
-  </div>
 
-  <button type="submit">Register</button>
-</form>
+    <button type="submit" class="register-btn">Register</button>
+  </form>
+  <div class="registration-3d-bg"></div>
+</div>
+<!-- <div *ngIf="message" [ngClass]="{'success-message': messageType === 'success', 'error-message': messageType === 'error'}">
+  {{ message }}
+</div> -->

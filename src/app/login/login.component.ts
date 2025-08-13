@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
@@ -13,7 +15,11 @@ export class LoginComponent {
   loginForm: FormGroup;
   showPasswordInstructions = false;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private http: HttpClient // <-- Inject HttpClient
+  ) {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -23,10 +29,17 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
-      console.log('Login successful:', { username, password });
-
-      // Navigate to another page after successful login
-      this.router.navigate(['/dashboard']);
+      this.http.post('http://localhost:8080/api/auth/login', { username, password })
+        .subscribe({
+          next: (response) => {
+            console.log('Login successful:', response);
+            this.router.navigate(['/dashboard']);
+          },
+          error: (err) => {
+            console.error('Login failed:', err);
+            alert('Login failed. Please check your credentials.');
+          }
+        });
     } else {
       console.log('Form is invalid');
     }
@@ -38,7 +51,6 @@ export class LoginComponent {
 
   forgotPassword() {
     alert('Redirecting to Forgot Password page...');
-    // Navigate to a forgot password page (if implemented)
     this.router.navigate(['/forgot-password']);
   }
 }
