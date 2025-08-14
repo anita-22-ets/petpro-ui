@@ -1,0 +1,30 @@
+/* filepath: c:\cap-copilot\petpro-ui\src\app\explore-service\explore-service.component.scss */
+.explore-service-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.registration-3d-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 30%, #a5b4fc 0%, transparent 60%),
+    radial-gradient(circle at 80% 70%, #f472b6 0%, transparent 60%),
+    radial-gradient(circle at 50% 100%, #34d399 0%, transparent 60%);
+  filter: blur(60px) brightness(1.1);
+  opacity: 0.7;
+}
+
+.explore-service-container ul {
+  list-style: disc inside;
+  text-align: left;
+  margin: 20px 0 0 0;
+  padding: 0;
+}

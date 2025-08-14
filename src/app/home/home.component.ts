@@ -26,4 +26,8 @@ export class HomeComponent {
   navigateToRegistration() {
     this.router.navigate(['/user-registration']); // Navigate to the registration route
   }
+
+   navigateToExploreServices() {
+    this.router.navigate(['/services']);// Navigate to the services route
+  }
 }

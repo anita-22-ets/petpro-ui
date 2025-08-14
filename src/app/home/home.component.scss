@@ -2,6 +2,23 @@
     text-align: center;
     padding: 20px;
     font-family: Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+.actions.top-right {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.actions.bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 h1 {
